@@ -3,6 +3,222 @@
 @import "../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 
 
+/*Colors*/
+
+$ebc-blue: #0E1840;
+$teal: #0A7E8B;
+$blue: #18A8C8;
+$green: #97BF3E;
+$red: #F04F26;
+$purple: #792357;
+$orange: #F27D21;
+$gray: #718A94;
+$medium-gray: #B1C7C2;
+$light-gray: #E4E4E0;
+
+/*MIXINS*/
+
+@mixin header1($size, $color) {
+	font-family: "Helvetica";
+	font-size: $size;
+	color: $color;
+}
+
+
+@mixin tugsten-semibold($size, $color) {
+	color: $color;
+	font-size: $size;
+	font-family: "Tungsten A", "Tungsten B";
+	font-style: normal;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+
+@mixin proxima-nova-semibold($size, $color) {
+	color: $color;
+	font-size: $size;
+	font-family: "proxima-nova",sans-serif;
+	font-style: normal;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+@mixin proxima-nova-thin($size, $color) {
+	color: $color;
+	font-size: $size;
+	font-family: "proxima-nova",sans-serif;
+	font-style: normal;
+	font-weight: 100;
+	text-transform: uppercase;
+}
+
+@mixin module-headers($color) {
+  background: $color;
+  width: 100%;
+  height: 35px;
+  text-align: center;
+  color:#fff;
+  h2 {
+    @include proxima-nova-thin(1.5em, #fff);
+    letter-spacing: 5px;
+    line-height: 35px;
+    -webkit-font-smoothing: antialiased;
+  }
+  &:after {
+    content: '';
+    width: 0;
+    height: 0;
+	  border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+  	border-top: 20px solid $color;
+    position: relative;
+    top:4px;
+  }
+}
+
+@mixin ctas($size, $color) {
+	font-size: 1.1em;
+	font-style: normal;
+	text-align: center;
+	display: inline-block;
+	margin: 5px;
+
+		a {
+			color: $color;
+			text-decoration: none;
+			display: block;
+			padding: 0 10px;
+			line-height: 1.6em;
+			border: 2px solid $color;
+			border-radius: 15px;
+		}
+
+		a:hover {
+			background: $color;
+			color: #fff;
+		}
+}
+
+@mixin content-headline($color){
+	color: $color;
+	font-size: 2.7em;
+	font-family: "Tungsten A", "Tungsten B";
+	font-style: normal;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	 text-shadow: 0 1px 7px black;
+}
+
+
+
+h1 {
+	@include tugsten-semibold(null, null);
+}
+
+p {
+	font-family: "proxima-nova",sans-serif;
+}
+
+
+
+
+
+
+body{
+	background-image: url("../img/river.jpg");
+	background-size: cover;
+}
+
+.fitness-header {
+	@include module-headers($orange);
+}
+
+.dining-header {
+	@include module-headers($blue);
+}
+
+.content-header {
+	@include module-headers($green);
+}
+
+.primary-fitness-module{
+	background-image: url("../img/trainer.jpg");
+
+}
+
+.tabbed-module{
+	background-image: url("../img/dining.jpg");
+
+}
+
+.standard-module{
+	background-image: url("../img/sundeck.jpg");
+
+}
+
+.blue-content-headline{
+	@include content-headline($ebc-blue);
+	margin-top: 100px;
+	margin-left: 50px;
+}
+.green-content-headline{
+	@include content-headline($green);
+	margin-top: 100px;
+	margin-left: 50px;
+}
+.white-content-headline{
+	@include content-headline(white);
+	margin-top: -15px;
+	margin-left: 50px; 
+	padding-bottom: 50px;
+
+}
+
+.purple-content-headline{
+	@include content-headline($purple);
+	padding-top: 50px;
+	margin-left: 50px;
+	margin-top: 0;
+	text-shadow: none;
+}
+
+.gray-content-headline{
+	@include content-headline($gray);
+	margin-top: -15px;
+	margin-left: 50px; 
+	text-shadow: none;
+
+}
+
+.fitness-module-menu{
+	background-color: $purple;
+	height: 50px;
+	margin-top: 300px; 
+}
+.tabbed-module-menu{
+	background-color: $blue;
+	height: 40px;
+}
+
+.fitness-module-content{
+	background-color: white;
+	color: $gray;
+	p{
+		margin-left: 50px;
+		margin-right: 50px;
+	}
+
+
+}
+
+.purple-button{
+	@include ctas(null, $purple);
+}
+
 
 /* PARTIAL BOOTSTRAP SUPPORT ~34K */
 /*@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/variables";
