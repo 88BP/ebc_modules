@@ -150,10 +150,26 @@ body{
 
 }
 
+/*TABBED MODULE STYLES*/
+
 .tabbed-module{
 	background-image: url("../img/dining.jpg");
 
+	.tabbed-module-menu{
+	background-color: $blue;
+	height: 40px;
 }
+	
+		.tabbed-menu-item{
+	text-align: center;
+	line-height: 40px;
+}
+
+}
+
+
+
+
 
 .standard-module{
 	background-image: url("../img/sundeck.jpg");
@@ -199,10 +215,7 @@ body{
 	height: 50px;
 	margin-top: 300px; 
 }
-.tabbed-module-menu{
-	background-color: $blue;
-	height: 40px;
-}
+
 
 .fitness-module-content{
 	background-color: white;
@@ -218,6 +231,8 @@ body{
 .purple-button{
 	@include ctas(null, $purple);
 }
+
+
 
 
 /* PARTIAL BOOTSTRAP SUPPORT ~34K */

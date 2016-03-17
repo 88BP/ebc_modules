@@ -5849,8 +5849,15 @@ body {
 .primary-fitness-module {
   background-image: url("../img/trainer.jpg"); }
 
+/*TABBED MODULE STYLES*/
 .tabbed-module {
   background-image: url("../img/dining.jpg"); }
+  .tabbed-module .tabbed-module-menu {
+    background-color: #18A8C8;
+    height: 40px; }
+  .tabbed-module .tabbed-menu-item {
+    text-align: center;
+    line-height: 40px; }
 
 .standard-module {
   background-image: url("../img/sundeck.jpg"); }
@@ -5923,10 +5930,6 @@ body {
   background-color: #792357;
   height: 50px;
   margin-top: 300px; }
-
-.tabbed-module-menu {
-  background-color: #18A8C8;
-  height: 40px; }
 
 .fitness-module-content {
   background-color: white;

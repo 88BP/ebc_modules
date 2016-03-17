@@ -1,6 +1,11 @@
 console.log('hey girl heyyyyyyyyy');
 
+$('.tabbed-module .tabbed-menu-item').on('click', tabbedMenuClick); 
 
+function tabbedMenuClick(){ 
+	console.log ('yo gurl your function is workingggggg')
+
+}
 /*!
  * jQuery JavaScript Library v2.2.1
  * http://jquery.com/
