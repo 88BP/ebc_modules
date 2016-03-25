@@ -115,7 +115,7 @@ $light-gray: #E4E4E0;
 	font-weight: 600;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	 text-shadow: 0 1px 7px black;
+	 text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.53);
 }
 
 
@@ -185,8 +185,7 @@ body{
 		height: 225px;
 		overflow: hidden;
 		position: absolute;
-		display: block;
-		opacity: 0;
+		display: none;
 
 	.tabbed-module-photo{
 		width: 100%;
@@ -196,7 +195,7 @@ body{
 
 }
 .tmc-1{
-		opacity: 1;
+		display:block;
 	}
 
 	.tabbed-module-menu{

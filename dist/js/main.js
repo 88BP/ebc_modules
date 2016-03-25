@@ -1,11 +1,33 @@
-console.log('hey girl heyyyyyyyyy');
+$(function () {
 
-$('.tabbed-module .tabbed-menu-item').on('click', tabbedMenuClick); 
 
-function tabbedMenuClick(){ 
-	console.log ('yo gurl your function is workingggggg')
+// TABBED MODULE MENU CLICK FUNCTIONS
 
-}
+$('.tmi-blue-1').on('click', function() {
+  $('.tabbed-module-content').hide();
+  $('.tmc-1').show();
+});
+
+$('.tmi-blue-2').on('click', function() {
+	$('.tabbed-module-content').hide();
+	$('.tmc-2').show();
+  	console.log ('this is the tmc-2 funtion')
+});
+
+$('.tmi-blue-3').on('click', function() {
+	$('.tabbed-module-content').hide();
+	$('.tmc-3').show();
+  	console.log ('this is the tmc-3 funtion')
+});
+
+$('.tmi-blue-4').on('click', function() {
+	$('.tabbed-module-content').hide();
+	$('.tmc-4').show();
+  	console.log ('this is the tmc-4 funtion')
+});
+
+
+});
 /*!
  * jQuery JavaScript Library v2.2.1
  * http://jquery.com/

@@ -5868,13 +5868,12 @@ body {
   height: 225px;
   overflow: hidden;
   position: absolute;
-  display: block;
-  opacity: 0; }
+  display: none; }
   .tabbed-module .tabbed-module-content .tabbed-module-photo {
     width: 100%; }
 
 .tabbed-module .tmc-1 {
-  opacity: 1; }
+  display: block; }
 
 .tabbed-module .tabbed-module-menu {
   color: white;
@@ -5914,7 +5913,7 @@ body {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
-  text-shadow: 0 1px 7px black;
+  text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.53);
   margin-left: 50px;
   position: absolute; }
 
@@ -5926,7 +5925,7 @@ body {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
-  text-shadow: 0 1px 7px black;
+  text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.53);
   margin-top: 100px;
   margin-left: 50px; }
 
@@ -5938,7 +5937,7 @@ body {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
-  text-shadow: 0 1px 7px black;
+  text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.53);
   margin-left: 50px;
   position: absolute; }
 
@@ -5950,7 +5949,7 @@ body {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
-  text-shadow: 0 1px 7px black;
+  text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.53);
   padding-top: 50px;
   margin-left: 50px;
   margin-top: 0;
@@ -5964,7 +5963,7 @@ body {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
-  text-shadow: 0 1px 7px black;
+  text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.53);
   margin-top: -15px;
   margin-left: 50px;
   text-shadow: none; }
