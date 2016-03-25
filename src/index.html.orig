@@ -60,6 +60,19 @@
                         </div>
                          <div class="tabbed-module-content tmc-2">
                             <h3 class="blue-content-headline">Another Dining Headline<br>Goes Here.</h3>
+<<<<<<< HEAD
+                            <img class="tabbed-module-photo" src="img/sandwich.jpg"/>
+                        </div> 
+                         <div class = "tabbed-module-content tmc-3">
+                            <h3 class="blue-content-headline">Third Headline<br>Goes Here.</h3>
+                            <img class="tabbed-module-photo" src="img/smoothie.jpg"/>
+                        </div> 
+                         <div class = "tabbed-module-content tmc-4">
+                            <h3 class="blue-content-headline">What Else<br>Goes Here.</h3>
+                            <img class="tabbed-module-photo" src="img/salmon.jpg"/>
+                        </div> 
+
+=======
                             <img class="tabbed-module-photo" src="img/dining.jpg"/>
                         </div>
                          <div class="tabbed-module-content tmc-3">
@@ -70,6 +83,7 @@
                             <h3 class="blue-content-headline">What Else<br>Goes Here.</h3>
                             <img class="tabbed-module-photo" src="img/dining.jpg"/>
                         </div>
+>>>>>>> db94b95b08d7fc9d10360aeed5c970557d18072b
 
 
                         <div class="tabbed-module-menu">
