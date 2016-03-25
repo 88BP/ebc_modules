@@ -5770,6 +5770,8 @@ body {
   background-size: cover; }
 
 .fitness-header {
+  position: relative;
+  z-index: 100;
   background: #F27D21;
   width: 100%;
   height: 35px;
@@ -5796,6 +5798,8 @@ body {
     top: 4px; }
 
 .dining-header {
+  position: relative;
+  z-index: 100;
   background: #18A8C8;
   width: 100%;
   height: 35px;
@@ -5822,6 +5826,8 @@ body {
     top: 4px; }
 
 .content-header {
+  position: relative;
+  z-index: 100;
   background: #97BF3E;
   width: 100%;
   height: 35px;
@@ -5864,38 +5870,39 @@ body {
     margin-right: 50px; }
 
 /*TABBED MODULE STYLES*/
-.tabbed-module .tabbed-module-content {
-  height: 225px;
-  overflow: hidden;
-  position: absolute;
-  display: block;
-  opacity: 0; }
-  .tabbed-module .tabbed-module-content .tabbed-module-photo {
-    width: 100%; }
-
-.tabbed-module .tmc-1 {
-  opacity: 1; }
-
-.tabbed-module .tabbed-module-menu {
-  color: white;
-  font-size: 10px;
-  font-family: "proxima-nova",sans-serif;
-  font-style: normal;
-  font-weight: 100;
-  text-transform: uppercase;
-  height: 40px;
-  margin-top: 225px; }
-  .tabbed-module .tabbed-module-menu .tabbed-menu-item {
-    text-align: center;
-    line-height: 40px; }
-  .tabbed-module .tabbed-module-menu .tmi-blue-1 {
-    background-color: #18A8C8; }
-  .tabbed-module .tabbed-module-menu .tmi-blue-2 {
-    background-color: #0c6d92; }
-  .tabbed-module .tabbed-module-menu .tmi-blue-3 {
-    background-color: #053a62; }
-  .tabbed-module .tabbed-module-menu .tmi-blue-4 {
-    background-color: #0E1840; }
+.tabbed-module {
+  position: relative; }
+  .tabbed-module .tabbed-module-content {
+    width: 100%;
+    height: 225px;
+    overflow: hidden;
+    position: absolute;
+    display: block;
+    opacity: 0; }
+    .tabbed-module .tabbed-module-content .tabbed-module-photo {
+      width: 100%; }
+  .tabbed-module .tmc-1 {
+    opacity: 1; }
+  .tabbed-module .tabbed-module-menu {
+    color: white;
+    font-size: 10px;
+    font-family: "proxima-nova",sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    text-transform: uppercase;
+    height: 40px;
+    margin-top: 225px; }
+    .tabbed-module .tabbed-module-menu .tabbed-menu-item {
+      text-align: center;
+      line-height: 40px; }
+    .tabbed-module .tabbed-module-menu .tmi-blue-1 {
+      background-color: #18A8C8; }
+    .tabbed-module .tabbed-module-menu .tmi-blue-2 {
+      background-color: #0c6d92; }
+    .tabbed-module .tabbed-module-menu .tmi-blue-3 {
+      background-color: #053a62; }
+    .tabbed-module .tabbed-module-menu .tmi-blue-4 {
+      background-color: #0E1840; }
 
 /*STANDARD MODULE STYLES*/
 .standard-module .standard-module-photo {
