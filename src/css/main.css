@@ -5754,6 +5754,7 @@ button.close {
 
 /*Colors*/
 /*MIXINS*/
+/*MIXINS THAT IVE MADE (NOT FROM TOMS STYLE GUIDE)*/
 h1 {
   font-family: "Tungsten A", "Tungsten B";
   font-style: normal;
@@ -5846,22 +5847,65 @@ body {
     position: relative;
     top: 4px; }
 
-.primary-fitness-module {
-  background-image: url("../img/trainer.jpg"); }
+/*FITNESS MODULE STYLES*/
+.primary-fitness-module .fitness-module-menu {
+  background-color: #792357;
+  height: 50px; }
+
+.primary-fitness-module .fitness-module-photo {
+  height: 250px;
+  overflow: hidden; }
+
+.primary-fitness-module .fitness-module-content {
+  background-color: white;
+  color: #718A94; }
+  .primary-fitness-module .fitness-module-content p {
+    margin-left: 50px;
+    margin-right: 50px; }
 
 /*TABBED MODULE STYLES*/
-.tabbed-module {
-  background-image: url("../img/dining.jpg"); }
-  .tabbed-module .tabbed-module-menu {
-    background-color: #18A8C8;
-    height: 40px; }
-  .tabbed-module .tabbed-menu-item {
+.tabbed-module .tabbed-module-content {
+  height: 225px;
+  overflow: hidden;
+  position: absolute;
+  display: block;
+  opacity: 0; }
+  .tabbed-module .tabbed-module-content .tabbed-module-photo {
+    width: 100%; }
+
+.tabbed-module .tmc-1 {
+  opacity: 1; }
+
+.tabbed-module .tabbed-module-menu {
+  color: white;
+  font-size: 10px;
+  font-family: "proxima-nova",sans-serif;
+  font-style: normal;
+  font-weight: 100;
+  text-transform: uppercase;
+  height: 40px;
+  margin-top: 225px; }
+  .tabbed-module .tabbed-module-menu .tabbed-menu-item {
     text-align: center;
     line-height: 40px; }
+  .tabbed-module .tabbed-module-menu .tmi-blue-1 {
+    background-color: #18A8C8; }
+  .tabbed-module .tabbed-module-menu .tmi-blue-2 {
+    background-color: #0c6d92; }
+  .tabbed-module .tabbed-module-menu .tmi-blue-3 {
+    background-color: #053a62; }
+  .tabbed-module .tabbed-module-menu .tmi-blue-4 {
+    background-color: #0E1840; }
 
-.standard-module {
-  background-image: url("../img/sundeck.jpg"); }
+/*STANDARD MODULE STYLES*/
+.standard-module .standard-module-photo {
+  height: 250px;
+  overflow: hidden; }
 
+.standard-module .standard-module-photo:hover {
+  background-color: #97BF3E; }
+
+/*HEADLINE STYLES....CURRENTLY THESE ARE HORRENDOUS AND I NEED TO FIX THEM!! :) */
 .blue-content-headline {
   color: #0E1840;
   font-size: 2.7em;
@@ -5871,8 +5915,8 @@ body {
   text-transform: uppercase;
   letter-spacing: 1px;
   text-shadow: 0 1px 7px black;
-  margin-top: 100px;
-  margin-left: 50px; }
+  margin-left: 50px;
+  position: absolute; }
 
 .green-content-headline {
   color: #97BF3E;
@@ -5895,9 +5939,8 @@ body {
   text-transform: uppercase;
   letter-spacing: 1px;
   text-shadow: 0 1px 7px black;
-  margin-top: -15px;
   margin-left: 50px;
-  padding-bottom: 50px; }
+  position: absolute; }
 
 .purple-content-headline {
   color: #792357;
@@ -5926,18 +5969,7 @@ body {
   margin-left: 50px;
   text-shadow: none; }
 
-.fitness-module-menu {
-  background-color: #792357;
-  height: 50px;
-  margin-top: 300px; }
-
-.fitness-module-content {
-  background-color: white;
-  color: #718A94; }
-  .fitness-module-content p {
-    margin-left: 50px;
-    margin-right: 50px; }
-
+/*THIS BUTTON MIXIN ISN"T WORKING FOR WHATEVER REASON*/
 .purple-button {
   font-size: 1.1em;
   font-style: normal;

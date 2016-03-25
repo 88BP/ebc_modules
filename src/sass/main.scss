@@ -102,6 +102,11 @@ $light-gray: #E4E4E0;
 		}
 }
 
+
+
+
+/*MIXINS THAT IVE MADE (NOT FROM TOMS STYLE GUIDE)*/
+
 @mixin content-headline($color){
 	color: $color;
 	font-size: 2.7em;
@@ -123,11 +128,6 @@ p {
 	font-family: "proxima-nova",sans-serif;
 }
 
-
-
-
-
-
 body{
 	background-image: url("../img/river.jpg");
 	background-size: cover;
@@ -145,41 +145,117 @@ body{
 	@include module-headers($green);
 }
 
-.primary-fitness-module{
-	background-image: url("../img/trainer.jpg");
 
+
+/*FITNESS MODULE STYLES*/
+
+
+.primary-fitness-module{
+
+	.fitness-module-menu{
+	background-color: $purple;
+	height: 50px;
+	
+	}
+
+	.fitness-module-photo{
+		height: 250px; 
+		overflow: hidden;
+	}
+
+	.fitness-module-content{
+		background-color: white;
+		color: $gray;
+		p{
+			margin-left: 50px;
+			margin-right: 50px;
+		}
+	}
 }
+
+
 
 /*TABBED MODULE STYLES*/
 
+
+
 .tabbed-module{
-	background-image: url("../img/dining.jpg");
+
+	.tabbed-module-content{
+		height: 225px;
+		overflow: hidden;
+		position: absolute;
+		display: block;
+		opacity: 0;
+
+	.tabbed-module-photo{
+		width: 100%;
+	}
+
+
+
+}
+.tmc-1{
+		opacity: 1;
+	}
 
 	.tabbed-module-menu{
-	background-color: $blue;
-	height: 40px;
-}
+		@include proxima-nova-thin(10px, white);
+		height: 40px;
+		margin-top: 225px;
+		
 	
-		.tabbed-menu-item{
-	text-align: center;
-	line-height: 40px;
-}
+	.tabbed-menu-item{
+		text-align: center;
+		line-height: 40px;
+	}
+	.tmi-blue-1{
+		background-color: $blue; 
+	}
+
+	.tmi-blue-2{
+		background-color: #0c6d92; 
+	}
+
+	.tmi-blue-3{
+		background-color: #053a62; 
+	}
+
+	.tmi-blue-4{
+		background-color: $ebc-blue; 
+	}
+	
 
 }
+}
 
 
-
+/*STANDARD MODULE STYLES*/
 
 
 .standard-module{
-	background-image: url("../img/sundeck.jpg");
+
+	.standard-module-photo{
+		height: 250px; 
+		overflow: hidden;}
+
+		.standard-module-photo:hover{
+			background-color: $green;
+		}
+	
+
 
 }
 
+
+
+
+/*HEADLINE STYLES....CURRENTLY THESE ARE HORRENDOUS AND I NEED TO FIX THEM!! :) */
+
 .blue-content-headline{
 	@include content-headline($ebc-blue);
-	margin-top: 100px;
 	margin-left: 50px;
+	position: absolute;
 }
 .green-content-headline{
 	@include content-headline($green);
@@ -188,9 +264,8 @@ body{
 }
 .white-content-headline{
 	@include content-headline(white);
-	margin-top: -15px;
 	margin-left: 50px; 
-	padding-bottom: 50px;
+	position: absolute; 
 
 }
 
@@ -210,23 +285,9 @@ body{
 
 }
 
-.fitness-module-menu{
-	background-color: $purple;
-	height: 50px;
-	margin-top: 300px; 
-}
 
 
-.fitness-module-content{
-	background-color: white;
-	color: $gray;
-	p{
-		margin-left: 50px;
-		margin-right: 50px;
-	}
-
-
-}
+/*THIS BUTTON MIXIN ISN"T WORKING FOR WHATEVER REASON*/
 
 .purple-button{
 	@include ctas(null, $purple);
