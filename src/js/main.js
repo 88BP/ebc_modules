@@ -1,5 +1,14 @@
 $(function () {
 
+	$('.flexslider').flexslider({
+		animation: "slide",
+		slideshowSpeed: 4000,
+		pauseOnHover: true,
+		directionNav: false,
+
+
+	});
+
 
 // TABBED MODULE MENU CLICK FUNCTIONS
 

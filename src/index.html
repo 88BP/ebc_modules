@@ -15,6 +15,7 @@
 
         <!-- build:css -->
         <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7238074/6149152/css/fonts.css" />
+        <link rel="stylesheet" href="bower_components/flexslider/flexslider.css" type="text/css">
         <link rel="stylesheet" href="css/main.css">
         <!-- endbuild -->
     </head>
@@ -28,15 +29,57 @@
                         <div class="fitness-header">
                             <h2>FITNESS</h2>
                         </div>
-                        <div class="fitness-module-photo">
-                            <img class="tabbed-module-photo" src="img/trainer.jpg"/>
+                        <div class="flexslider">
+                            <ul class="slides">
+                                <li>
+                                    <img src="img/trainer.jpg" />
+                                </li>
+                                 <li>
+                                    <img src="img/groupex.png" />
+                                </li>
+                                 <li>
+                                    <img src="img/yoga.jpg" />
+                                </li>
+                                 <li>
+                                    <img src="img/pilates.jpg" />
+                                </li>
+                                 <li>
+                                    <img src="img/performance.png" />
+                                </li>
+                            </ul>
                         </div>
+
                         <div class="fitness-module-menu">
-                            <div class="col-md-2 fitness-menu-item fmi-red-1">Subhead 1</div>
-                            <div class="col-md-2 fitness-menu-item fmi-red-2">Subhead 2</div>
-                            <div class="col-md-2 fitness-menu-item fmi-red-3">Subhead 3</div>
-                            <div class="col-md-2 fitness-menu-item fmi-red-4">Subhead 4</div>
-                            <div class="col-md-2 fitness-menu-item fmi-red-5">Subhead 5</div>
+                            <div class="col-md-15 fitness-menu-item fmi-red-1">
+                                <div class="fmi-icon">
+                                    <img src="img/icons/whistle.svg">
+                                </div>
+                                <p id="training">Personal Training</p>
+                            </div>
+                            <div class="col-md-15 fitness-menu-item fmi-red-2">
+                                <div class="fmi-icon">
+                                    <img src="img/icons/group.svg">
+                                </div>
+                                <p>Group Ex</p>
+                            </div>
+                            <div class="col-md-15 fitness-menu-item fmi-red-3">
+                                <div class="fmi-icon">
+                                    <img src="img/icons/lotus.svg">
+                                </div>
+                                <p>Yoga</p>
+                            </div>
+                            <div class="col-md-15 fitness-menu-item fmi-red-4">
+                                <div class="fmi-icon">
+                                    <img src="img/icons/pilates.svg">
+                                </div>
+                                <p>Pilates</p>
+                            </div>
+                            <div class="col-md-15 fitness-menu-item fmi-red-5">
+                                <div class="fmi-icon">
+                                    <img src="img/icons/barchart.svg">
+                                </div>
+                                <p>Performance</p>
+                            </div>
                         </div>
                         <div class="fitness-module-content">
                             <h3 class="purple-content-headline"> Personal training headline </h3>
@@ -55,20 +98,36 @@
                         </div>
 
                         <div class="tabbed-module-content tmc-1">
-                            <h3 class="blue-content-headline">Dining Headline<br>Goes Here.</h3>
+                            <div class="tabbed-module-overlay">
+                                <h3 class="overlay-headline">Dining Headline <br>Goes Here.</h3>
+                                <p class="overlay-content"> Lorem ipsum dolor sit amet. consectetu adipiscing elit. In sagttis ante metus, nect pellentesque mi interdum non. </p>
+                            </div>
+                            <h3 class="content-headline blue-content-headline">Dining Headline<br>Goes Here.</h3>
                             <img class="tabbed-module-photo" src="img/dining.jpg"/>
                         </div>
                          <div class="tabbed-module-content tmc-2">
-                            <h3 class="blue-content-headline">Another Dining Headline<br>Goes Here.</h3>
-                            <img class="tabbed-module-photo" src="img/dining.jpg"/>
+                            <div class="tabbed-module-overlay">
+                                <h3 class="overlay-headline">Another Dining Headline <br>Goes Here.</h3>
+                                <p class="overlay-content"> Lorem ipsum dolor sit amet. consectetu adipiscing elit. In sagttis ante metus, nect pellentesque mi interdum non. </p>
+                            </div>
+                            <h3 class="content-headline blue-content-headline">Another Dining Headline<br>Goes Here.</h3>
+                            <img class="tabbed-module-photo" src="img/sandwich.jpg"/>
                         </div>
                          <div class="tabbed-module-content tmc-3">
-                            <h3 class="blue-content-headline">Third Headline<br>Goes Here.</h3>
-                            <img class="tabbed-module-photo" src="img/dining.jpg"/>
+                            <div class="tabbed-module-overlay">
+                                <h3 class="overlay-headline">Third Headline<br>Goes Here.</h3>
+                                <p class="overlay-content"> Lorem ipsum dolor sit amet. consectetu adipiscing elit. In sagttis ante metus, nect pellentesque mi interdum non. </p>
+                            </div>
+                            <h3 class="content-headline blue-content-headline">Third Headline<br>Goes Here.</h3>
+                            <img class="tabbed-module-photo" src="img/salmon.jpg"/>
                         </div>
                          <div class="tabbed-module-content tmc-4">
-                            <h3 class="blue-content-headline">What Else<br>Goes Here.</h3>
-                            <img class="tabbed-module-photo" src="img/dining.jpg"/>
+                            <div class="tabbed-module-overlay">
+                            <h3 class="overlay-headline">Something Else<br>Goes Here.</h3>
+                                <p class="overlay-content"> Lorem ipsum dolor sit amet. consectetu adipiscing elit. In sagttis ante metus, nect pellentesque mi interdum non. </p>
+                            </div>
+                            <h3 class="content-headline blue-content-headline">What Else<br>Goes Here.</h3>
+                            <img class="tabbed-module-photo" src="img/smoothie.jpg"/>
                         </div>
 
 
@@ -84,11 +143,18 @@
                         <div class="content-header">
                             <h2>FEATURED CONTENT</h2>
                         </div>
-                          <div class="standard-module-photo">
-                            <img class="img-responsive" src="img/sundeck.jpg"/>
+                          <div class="standard-module-content">
+                            <div class="standard-module-overlay">
+                                <h3 class="overlay-headline">Summer Sundeck Party<br>Headline Goes Here.</h3>
+                                <p class="overlay-content"> Lorem ipsum dolor sit amet. consectetu adipiscing elit. In sagttis ante metus, nect pellentesque mi interdum non. </p>
+                                 <div class="white-button"><a  href="#"> Learn more</a></div>
+
+                            </div>
+                            <h3 class="content-headline green-content-headline">Summer Sundeck Party<br>Headline Goes Here.</h3>
+                            <img class="standard-module-photo" src="img/sundeck.jpg"/>
+
+
                         </div>
-                            <h3 class="green-content-headline">Summer Sundeck Party</h3>
-                            <h3 class="white-content-headline">Headline Goes Here.</h3>
                     </div>
                 </div>
 
@@ -103,6 +169,7 @@
 
         <!-- build:js-footer -->
         <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/flexslider/jquery.flexslider.js"></script>
         <script src="js/main.js"></script>
         <!-- endbuild -->
 

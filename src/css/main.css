@@ -5755,6 +5755,36 @@ button.close {
 /*Colors*/
 /*MIXINS*/
 /*MIXINS THAT IVE MADE (NOT FROM TOMS STYLE GUIDE)*/
+/*CUSTOM BOOSTRAP COLUMNS*/
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 10px;
+  padding-left: 10px; }
+
+.col-xs-15 {
+  width: 100%;
+  float: left; }
+
+@media (min-width: 768px) {
+  .col-sm-15 {
+    width: 20%;
+    float: left; } }
+
+@media (min-width: 992px) {
+  .col-md-15 {
+    width: 20%;
+    float: left; } }
+
+@media (min-width: 1200px) {
+  .col-lg-15 {
+    width: 20%;
+    float: left; } }
+
+/*Rest of CSS*/
 h1 {
   font-family: "Tungsten A", "Tungsten B";
   font-style: normal;
@@ -5855,8 +5885,37 @@ body {
 
 /*FITNESS MODULE STYLES*/
 .primary-fitness-module .fitness-module-menu {
-  background-color: #792357;
-  height: 50px; }
+  color: white;
+  font-size: 10px;
+  font-family: "proxima-nova",sans-serif;
+  font-style: normal;
+  font-weight: 100;
+  text-transform: uppercase;
+  height: 40px;
+  /*ask tom about the "Personal Training" menu item*/ }
+  .primary-fitness-module .fitness-module-menu .fmi-icon {
+    width: 50%;
+    margin: 10px auto 0 auto; }
+    .primary-fitness-module .fitness-module-menu .fmi-icon img {
+      max-height: 28px; }
+  .primary-fitness-module .fitness-module-menu p {
+    margin-bottom: 7px; }
+  .primary-fitness-module .fitness-module-menu #training {
+    margin-top: 10px;
+    line-height: 10px; }
+  .primary-fitness-module .fitness-module-menu .fitness-menu-item {
+    text-align: center;
+    line-height: 30px; }
+  .primary-fitness-module .fitness-module-menu .fmi-red-1 {
+    background-color: #F27D21; }
+  .primary-fitness-module .fitness-module-menu .fmi-red-2 {
+    background-color: #F04F26; }
+  .primary-fitness-module .fitness-module-menu .fmi-red-3 {
+    background-color: #b23945; }
+  .primary-fitness-module .fitness-module-menu .fmi-red-4 {
+    background-color: #9c304e; }
+  .primary-fitness-module .fitness-module-menu .fmi-red-5 {
+    background-color: #792357; }
 
 .primary-fitness-module .fitness-module-photo {
   height: 250px;
@@ -5870,39 +5929,6 @@ body {
     margin-right: 50px; }
 
 /*TABBED MODULE STYLES*/
-<<<<<<< HEAD
-.tabbed-module .tabbed-module-content {
-  height: 225px;
-  overflow: hidden;
-  position: absolute;
-  display: none; }
-  .tabbed-module .tabbed-module-content .tabbed-module-photo {
-    width: 100%; }
-
-.tabbed-module .tmc-1 {
-  display: block; }
-
-.tabbed-module .tabbed-module-menu {
-  color: white;
-  font-size: 10px;
-  font-family: "proxima-nova",sans-serif;
-  font-style: normal;
-  font-weight: 100;
-  text-transform: uppercase;
-  height: 40px;
-  margin-top: 225px; }
-  .tabbed-module .tabbed-module-menu .tabbed-menu-item {
-    text-align: center;
-    line-height: 40px; }
-  .tabbed-module .tabbed-module-menu .tmi-blue-1 {
-    background-color: #18A8C8; }
-  .tabbed-module .tabbed-module-menu .tmi-blue-2 {
-    background-color: #0c6d92; }
-  .tabbed-module .tabbed-module-menu .tmi-blue-3 {
-    background-color: #053a62; }
-  .tabbed-module .tabbed-module-menu .tmi-blue-4 {
-    background-color: #0E1840; }
-=======
 .tabbed-module {
   position: relative; }
   .tabbed-module .tabbed-module-content {
@@ -5910,12 +5936,22 @@ body {
     height: 225px;
     overflow: hidden;
     position: absolute;
-    display: block;
-    opacity: 0; }
+    display: none; }
     .tabbed-module .tabbed-module-content .tabbed-module-photo {
       width: 100%; }
+  .tabbed-module .tabbed-module-content:hover .tabbed-module-overlay {
+    display: block; }
+  .tabbed-module .tabbed-module-content:hover .content-headline {
+    display: none; }
+  .tabbed-module .tabbed-module-overlay {
+    background-color: rgba(25, 169, 201, 0.7);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+    padding: 15px 50px; }
   .tabbed-module .tmc-1 {
-    opacity: 1; }
+    display: block; }
   .tabbed-module .tabbed-module-menu {
     color: white;
     font-size: 10px;
@@ -5929,22 +5965,62 @@ body {
       text-align: center;
       line-height: 40px; }
     .tabbed-module .tabbed-module-menu .tmi-blue-1 {
-      background-color: #18A8C8; }
+      position: relative;
+      padding: 0px;
+      background: #18A8C8;
+      border-radius: 0px; }
+      .tabbed-module .tabbed-module-menu .tmi-blue-1:after {
+        position: absolute;
+        border-style: solid;
+        border-width: 0 15px 15px;
+        border-color: #18A8C8 transparent;
+        display: block;
+        width: 0;
+        z-index: 1;
+        margin-left: -15px;
+        top: -15px;
+        left: 50%; }
     .tabbed-module .tabbed-module-menu .tmi-blue-2 {
       background-color: #0c6d92; }
     .tabbed-module .tabbed-module-menu .tmi-blue-3 {
       background-color: #053a62; }
     .tabbed-module .tabbed-module-menu .tmi-blue-4 {
       background-color: #0E1840; }
->>>>>>> db94b95b08d7fc9d10360aeed5c970557d18072b
 
 /*STANDARD MODULE STYLES*/
-.standard-module .standard-module-photo {
-  height: 250px;
-  overflow: hidden; }
+.standard-module {
+  position: relative; }
+  .standard-module .standard-module-content {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    position: absolute; }
+    .standard-module .standard-module-content .standard-module-photo {
+      width: 100%; }
+  .standard-module .standard-module-content:hover .standard-module-overlay {
+    display: block; }
+  .standard-module .standard-module-content:hover .content-headline {
+    display: none; }
+  .standard-module .standard-module-overlay {
+    background-color: rgba(152, 192, 61, 0.7);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+    padding: 15px 50px; }
 
-.standard-module .standard-module-photo:hover {
-  background-color: #97BF3E; }
+/*Overlay Styles*/
+.overlay-headline {
+  color: #ffffff;
+  font-size: 2.7em;
+  font-family: "Tungsten A", "Tungsten B";
+  font-style: normal;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px; }
+
+.overlay-content {
+  color: white; }
 
 /*HEADLINE STYLES....CURRENTLY THESE ARE HORRENDOUS AND I NEED TO FIX THEM!! :) */
 .blue-content-headline {
@@ -5968,8 +6044,8 @@ body {
   text-transform: uppercase;
   letter-spacing: 1px;
   text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.53);
-  margin-top: 100px;
-  margin-left: 50px; }
+  margin-left: 50px;
+  position: absolute; }
 
 .white-content-headline {
   color: white;
@@ -6010,7 +6086,7 @@ body {
   margin-left: 50px;
   text-shadow: none; }
 
-/*THIS BUTTON MIXIN ISN"T WORKING FOR WHATEVER REASON*/
+/*Button Styles*/
 .purple-button {
   font-size: 1.1em;
   font-style: normal;
@@ -6028,6 +6104,27 @@ body {
   .purple-button a:hover {
     background: #792357;
     color: #fff; }
+
+.white-button {
+  font-size: 1.1em;
+  font-style: normal;
+  text-align: center;
+  display: inline-block;
+  margin: 5px;
+  margin: 5px 0; }
+  .white-button a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    padding: 0 10px;
+    line-height: 1.6em;
+    border: 2px solid #ffffff;
+    border-radius: 15px; }
+  .white-button a:hover {
+    background: #ffffff;
+    color: #fff; }
+  .white-button a:hover {
+    background-color: #97BF3E; }
 
 /* PARTIAL BOOTSTRAP SUPPORT ~34K */
 /*@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/variables";

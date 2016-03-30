@@ -121,6 +121,63 @@ $light-gray: #E4E4E0;
 }
 
 
+@mixin overlay-headline($color){
+	color: $color;
+	font-size: 2.7em;
+	font-family: "Tungsten A", "Tungsten B";
+	font-style: normal;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+
+
+/*CUSTOM BOOSTRAP COLUMNS*/
+
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.col-xs-15 {
+    width: 100%;
+    float: left;
+}
+@media (min-width: 768px) {
+.col-sm-15 {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 992px) {
+    .col-md-15 {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 1200px) {
+    .col-lg-15 {
+        width: 20%;
+        float: left;
+    }
+}
+
+
+
+
+
+
+
+
+/*Rest of CSS*/
+
+
 
 h1 {
 	@include tugsten-semibold(null, null);
@@ -154,11 +211,55 @@ body{
 
 .primary-fitness-module{
 
-	.fitness-module-menu{
-	background-color: $purple;
-	height: 50px;
 
-	}
+	.fitness-module-menu{
+		@include proxima-nova-thin(10px, white);
+		height: 40px;
+
+		.fmi-icon{
+			width: 50%;
+			margin: 10px auto 0 auto;
+
+			img{
+				max-height:28px;
+			}
+		}
+		p{
+			margin-bottom: 7px;
+
+		}
+
+		/*ask tom about the "Personal Training" menu item*/
+
+		#training{
+			margin-top: 10px;
+			line-height: 10px;
+		}
+		.fitness-menu-item{
+			text-align: center;
+			line-height: 30px;
+		}
+		.fmi-red-1{
+			background-color: $orange;
+		}
+
+		.fmi-red-2{
+			background-color: $red;
+		}
+
+		.fmi-red-3{
+			background-color: #b23945;
+		}
+
+		.fmi-red-4{
+			background-color: #9c304e;
+		}
+		.fmi-red-5{
+			background-color: $purple;
+		}
+
+
+}
 
 	.fitness-module-photo{
 		height: 250px;
@@ -192,11 +293,28 @@ body{
 
 	.tabbed-module-photo{
 		width: 100%;
+		}
 	}
 
+	.tabbed-module-content:hover{
+			.tabbed-module-overlay{
+				display: block;
+			}
+			.content-headline{
+				display:none;
+			}
+		}
 
 
-}
+		.tabbed-module-overlay{
+			background-color: rgba(25, 169, 201, .7);
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			display: none;
+			padding: 15px 50px;
+		}
+
 .tmc-1{
 		display:block;
 	}
@@ -212,7 +330,26 @@ body{
 		line-height: 40px;
 	}
 	.tmi-blue-1{
-		background-color: $blue;
+		position: relative;
+		padding: 0px;
+		background: #18A8C8;
+		-webkit-border-radius: 0px;
+		-moz-border-radius: 0px;
+		border-radius: 0px;
+
+		  &:after {
+			position: absolute;
+			border-style: solid;
+			border-width: 0 15px 15px;
+			border-color: #18A8C8 transparent;
+			display: block;
+			width: 0;
+			z-index: 1;
+			margin-left: -15px;
+			top: -15px;
+			left: 50%;
+		    
+  		}
 	}
 
 	.tmi-blue-2{
@@ -236,17 +373,49 @@ body{
 
 
 .standard-module{
+	position: relative;
 
-	.standard-module-photo{
+	.standard-module-content{
+		width: 100%;
 		height: 250px;
-		overflow: hidden;}
+		overflow: hidden;
+		position: absolute;
 
-		.standard-module-photo:hover{
-			background-color: $green;
+		.standard-module-photo{
+			width: 100%;
+
 		}
+	}
+
+	.standard-module-content:hover{
+		.standard-module-overlay{
+			display: block;
+		}
+		.content-headline{
+			display:none;
+		}
+	}
 
 
+	.standard-module-overlay{
+		background-color: rgba(152, 192, 61, .7);
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		display: none;
+		padding: 15px 50px;
+	}
+}
 
+
+/*Overlay Styles*/
+
+.overlay-headline{
+	@include overlay-headline(#ffffff);
+}
+
+.overlay-content{
+	color: white;
 }
 
 
@@ -261,8 +430,8 @@ body{
 }
 .green-content-headline{
 	@include content-headline($green);
-	margin-top: 100px;
 	margin-left: 50px;
+	position: absolute;
 }
 .white-content-headline{
 	@include content-headline(white);
@@ -289,10 +458,19 @@ body{
 
 
 
-/*THIS BUTTON MIXIN ISN"T WORKING FOR WHATEVER REASON*/
+/*Button Styles*/
 
 .purple-button{
 	@include ctas(null, $purple);
+}
+
+.white-button{
+	@include ctas(null, #ffffff);
+	margin: 5px 0;
+
+	a:hover{
+		background-color: $green;
+	}
 }
 
 
