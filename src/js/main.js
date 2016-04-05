@@ -63,7 +63,7 @@ $('.tmi-blue-1').on('click', function() {
 });
 
 $('.tmi-blue-2').on('click', function() {
-	
+
 	$('.tabbed-module-content').hide();
 	$('.tmc-2').show();
 	// $('.tmi-blue-1').removeClass('tmi-blue-1-active');

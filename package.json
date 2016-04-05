@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Quench",
+  "author": "88",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "*",
@@ -17,16 +17,18 @@
     "gulp-html-replace": "^1.5.5",
     "gulp-if": "^2.0.0",
     "gulp-imagemin": "*",
-    "gulp-jshint": "^2.0.0",
+    "gulp-jshint": "*",
     "gulp-minify-css": "*",
     "gulp-plumber": "*",
     "gulp-rename": "*",
     "gulp-sass": "*",
-    "gulp-uglify": "*",
-    "jshint": "^2.9.1"
+    "gulp-uglify": "*"
   },
   "dependencies": {
+    "gulp-sourcemaps": "^1.6.0",
     "main-bower-files": "^2.11.1",
-    "wiredep": "^3.0.0"
+    "minimist": "^1.2.0",
+    "wiredep": "^3.0.0",
+    "yargs": "^4.3.2"
   }
 }
