@@ -214,7 +214,8 @@ body{
 
 	.fitness-module-menu{
 		@include proxima-nova-thin(10px, white);
-		height: 40px;
+		height: 77px;
+
 
 		.fmi-icon{
 			width: 50%;
@@ -239,8 +240,25 @@ body{
 			text-align: center;
 			line-height: 30px;
 		}
+
+		.fitness-menu-item:hover{
+			cursor: pointer;
+		}
 		.fmi-red-1{
 			background-color: $orange;
+
+			&:before{
+			   content: '';
+			    width: 0;
+			    height: 0;
+				border-left: 20px solid transparent;
+			    border-right: 20px solid transparent;
+			  	border-bottom: 20px solid $orange;
+			    position: absolute;
+			    top:-13px;
+			    left: 30%;
+		    
+  		}
 		}
 
 		.fmi-red-2{
@@ -266,14 +284,14 @@ body{
 		overflow: hidden;
 	}
 
-	.fitness-module-content{
+	/*.fitness-module-content{
 		background-color: white;
 		color: $gray;
 		p{
 			margin-left: 50px;
 			margin-right: 50px;
 		}
-	}
+	}*/
 }
 
 
@@ -329,40 +347,83 @@ body{
 		text-align: center;
 		line-height: 40px;
 	}
+
+	.tabbed-menu-item:hover{
+		cursor: pointer;
+	}
 	.tmi-blue-1{
 		position: relative;
-		padding: 0px;
-		background: #18A8C8;
-		-webkit-border-radius: 0px;
-		-moz-border-radius: 0px;
-		border-radius: 0px;
+		background-color: $blue;
+  	}
 
-		  &:after {
-			position: absolute;
-			border-style: solid;
-			border-width: 0 15px 15px;
-			border-color: #18A8C8 transparent;
-			display: block;
-			width: 0;
-			z-index: 1;
-			margin-left: -15px;
-			top: -15px;
-			left: 50%;
-		    
+  	.tmi-blue-1-active{
+  				&:before{
+			   content: '';
+			    width: 0;
+			    height: 0;
+				border-left: 20px solid transparent;
+			    border-right: 20px solid transparent;
+			  	border-bottom: 20px solid $blue;
+			    position: absolute;
+			    top:-13px;
+			    left: 35%;
   		}
-	}
+  	}
+
 
 	.tmi-blue-2{
 		background-color: #0c6d92;
 	}
 
+	.tmi-blue-2-active{
+		&:before{
+			content: '';
+			    width: 0;
+			    height: 0;
+				border-left: 20px solid transparent;
+			    border-right: 20px solid transparent;
+			  	border-bottom: 20px solid #0c6d92;
+			    position: absolute;
+			    top:-13px;
+			    left: 35%;
+	}
+}
+
 	.tmi-blue-3{
 		background-color: #053a62;
 	}
 
+	.tmi-blue-3-active{
+  				&:before{
+			   content: '';
+			    width: 0;
+			    height: 0;
+				border-left: 20px solid transparent;
+			    border-right: 20px solid transparent;
+			  	border-bottom: 20px solid #053a62;
+			    position: absolute;
+			    top:-13px;
+			    left: 35%;
+  		}
+  	}
+
 	.tmi-blue-4{
 		background-color: $ebc-blue;
 	}
+
+	.tmi-blue-4-active{
+  				&:before{
+			   content: '';
+			    width: 0;
+			    height: 0;
+				border-left: 20px solid transparent;
+			    border-right: 20px solid transparent;
+			  	border-bottom: 20px solid $ebc-blue;
+			    position: absolute;
+			    top:-13px;
+			    left: 35%;
+  		}
+  	}
 
 
 }
@@ -387,14 +448,7 @@ body{
 		}
 	}
 
-	.standard-module-content:hover{
-		.standard-module-overlay{
-			display: block;
-		}
-		.content-headline{
-			display:none;
-		}
-	}
+
 
 
 	.standard-module-overlay{
@@ -406,6 +460,15 @@ body{
 		padding: 15px 50px;
 	}
 }
+
+	.standard-module:hover{
+		.standard-module-overlay{
+			display: block;
+		}
+		.content-headline{
+			display:none;
+		}
+	}
 
 
 /*Overlay Styles*/
@@ -442,8 +505,6 @@ body{
 
 .purple-content-headline{
 	@include content-headline($purple);
-	padding-top: 50px;
-	margin-left: 50px;
 	margin-top: 0;
 	text-shadow: none;
 }
@@ -451,7 +512,6 @@ body{
 .gray-content-headline{
 	@include content-headline($gray);
 	margin-top: -15px;
-	margin-left: 50px;
 	text-shadow: none;
 
 }
@@ -472,6 +532,21 @@ body{
 		background-color: $green;
 	}
 }
+
+
+/*Flexsliders*/
+#fitness-content-slider{
+	border-radius: 0;
+	height: 277px;
+	padding: 40px;
+
+	.flex-viewport{
+		height: 275px;
+	}
+	.slides{
+		height: 275px;
+	}
+	}
 
 
 

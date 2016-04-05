@@ -5884,49 +5884,62 @@ body {
     top: 4px; }
 
 /*FITNESS MODULE STYLES*/
-.primary-fitness-module .fitness-module-menu {
-  color: white;
-  font-size: 10px;
-  font-family: "proxima-nova",sans-serif;
-  font-style: normal;
-  font-weight: 100;
-  text-transform: uppercase;
-  height: 40px;
-  /*ask tom about the "Personal Training" menu item*/ }
-  .primary-fitness-module .fitness-module-menu .fmi-icon {
-    width: 50%;
-    margin: 10px auto 0 auto; }
-    .primary-fitness-module .fitness-module-menu .fmi-icon img {
-      max-height: 28px; }
-  .primary-fitness-module .fitness-module-menu p {
-    margin-bottom: 7px; }
-  .primary-fitness-module .fitness-module-menu #training {
-    margin-top: 10px;
-    line-height: 10px; }
-  .primary-fitness-module .fitness-module-menu .fitness-menu-item {
-    text-align: center;
-    line-height: 30px; }
-  .primary-fitness-module .fitness-module-menu .fmi-red-1 {
-    background-color: #F27D21; }
-  .primary-fitness-module .fitness-module-menu .fmi-red-2 {
-    background-color: #F04F26; }
-  .primary-fitness-module .fitness-module-menu .fmi-red-3 {
-    background-color: #b23945; }
-  .primary-fitness-module .fitness-module-menu .fmi-red-4 {
-    background-color: #9c304e; }
-  .primary-fitness-module .fitness-module-menu .fmi-red-5 {
-    background-color: #792357; }
-
-.primary-fitness-module .fitness-module-photo {
-  height: 250px;
-  overflow: hidden; }
-
-.primary-fitness-module .fitness-module-content {
-  background-color: white;
-  color: #718A94; }
-  .primary-fitness-module .fitness-module-content p {
-    margin-left: 50px;
-    margin-right: 50px; }
+.primary-fitness-module {
+  /*.fitness-module-content{
+		background-color: white;
+		color: $gray;
+		p{
+			margin-left: 50px;
+			margin-right: 50px;
+		}
+	}*/ }
+  .primary-fitness-module .fitness-module-menu {
+    color: white;
+    font-size: 10px;
+    font-family: "proxima-nova",sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    text-transform: uppercase;
+    height: 77px;
+    /*ask tom about the "Personal Training" menu item*/ }
+    .primary-fitness-module .fitness-module-menu .fmi-icon {
+      width: 50%;
+      margin: 10px auto 0 auto; }
+      .primary-fitness-module .fitness-module-menu .fmi-icon img {
+        max-height: 28px; }
+    .primary-fitness-module .fitness-module-menu p {
+      margin-bottom: 7px; }
+    .primary-fitness-module .fitness-module-menu #training {
+      margin-top: 10px;
+      line-height: 10px; }
+    .primary-fitness-module .fitness-module-menu .fitness-menu-item {
+      text-align: center;
+      line-height: 30px; }
+    .primary-fitness-module .fitness-module-menu .fitness-menu-item:hover {
+      cursor: pointer; }
+    .primary-fitness-module .fitness-module-menu .fmi-red-1 {
+      background-color: #F27D21; }
+      .primary-fitness-module .fitness-module-menu .fmi-red-1:before {
+        content: '';
+        width: 0;
+        height: 0;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-bottom: 20px solid #F27D21;
+        position: absolute;
+        top: -13px;
+        left: 30%; }
+    .primary-fitness-module .fitness-module-menu .fmi-red-2 {
+      background-color: #F04F26; }
+    .primary-fitness-module .fitness-module-menu .fmi-red-3 {
+      background-color: #b23945; }
+    .primary-fitness-module .fitness-module-menu .fmi-red-4 {
+      background-color: #9c304e; }
+    .primary-fitness-module .fitness-module-menu .fmi-red-5 {
+      background-color: #792357; }
+  .primary-fitness-module .fitness-module-photo {
+    height: 250px;
+    overflow: hidden; }
 
 /*TABBED MODULE STYLES*/
 .tabbed-module {
@@ -5964,28 +5977,57 @@ body {
     .tabbed-module .tabbed-module-menu .tabbed-menu-item {
       text-align: center;
       line-height: 40px; }
+    .tabbed-module .tabbed-module-menu .tabbed-menu-item:hover {
+      cursor: pointer; }
     .tabbed-module .tabbed-module-menu .tmi-blue-1 {
       position: relative;
-      padding: 0px;
-      background: #18A8C8;
-      border-radius: 0px; }
-      .tabbed-module .tabbed-module-menu .tmi-blue-1:after {
-        position: absolute;
-        border-style: solid;
-        border-width: 0 15px 15px;
-        border-color: #18A8C8 transparent;
-        display: block;
-        width: 0;
-        z-index: 1;
-        margin-left: -15px;
-        top: -15px;
-        left: 50%; }
+      background-color: #18A8C8; }
+    .tabbed-module .tabbed-module-menu .tmi-blue-1-active:before {
+      content: '';
+      width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-bottom: 20px solid #18A8C8;
+      position: absolute;
+      top: -13px;
+      left: 35%; }
     .tabbed-module .tabbed-module-menu .tmi-blue-2 {
       background-color: #0c6d92; }
+    .tabbed-module .tabbed-module-menu .tmi-blue-2-active:before {
+      content: '';
+      width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-bottom: 20px solid #0c6d92;
+      position: absolute;
+      top: -13px;
+      left: 35%; }
     .tabbed-module .tabbed-module-menu .tmi-blue-3 {
       background-color: #053a62; }
+    .tabbed-module .tabbed-module-menu .tmi-blue-3-active:before {
+      content: '';
+      width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-bottom: 20px solid #053a62;
+      position: absolute;
+      top: -13px;
+      left: 35%; }
     .tabbed-module .tabbed-module-menu .tmi-blue-4 {
       background-color: #0E1840; }
+    .tabbed-module .tabbed-module-menu .tmi-blue-4-active:before {
+      content: '';
+      width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-bottom: 20px solid #0E1840;
+      position: absolute;
+      top: -13px;
+      left: 35%; }
 
 /*STANDARD MODULE STYLES*/
 .standard-module {
@@ -5997,10 +6039,6 @@ body {
     position: absolute; }
     .standard-module .standard-module-content .standard-module-photo {
       width: 100%; }
-  .standard-module .standard-module-content:hover .standard-module-overlay {
-    display: block; }
-  .standard-module .standard-module-content:hover .content-headline {
-    display: none; }
   .standard-module .standard-module-overlay {
     background-color: rgba(152, 192, 61, 0.7);
     width: 100%;
@@ -6008,6 +6046,12 @@ body {
     position: absolute;
     display: none;
     padding: 15px 50px; }
+
+.standard-module:hover .standard-module-overlay {
+  display: block; }
+
+.standard-module:hover .content-headline {
+  display: none; }
 
 /*Overlay Styles*/
 .overlay-headline {
@@ -6068,8 +6112,6 @@ body {
   text-transform: uppercase;
   letter-spacing: 1px;
   text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.53);
-  padding-top: 50px;
-  margin-left: 50px;
   margin-top: 0;
   text-shadow: none; }
 
@@ -6083,7 +6125,6 @@ body {
   letter-spacing: 1px;
   text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.53);
   margin-top: -15px;
-  margin-left: 50px;
   text-shadow: none; }
 
 /*Button Styles*/
@@ -6125,6 +6166,16 @@ body {
     color: #fff; }
   .white-button a:hover {
     background-color: #97BF3E; }
+
+/*Flexsliders*/
+#fitness-content-slider {
+  border-radius: 0;
+  height: 277px;
+  padding: 40px; }
+  #fitness-content-slider .flex-viewport {
+    height: 275px; }
+  #fitness-content-slider .slides {
+    height: 275px; }
 
 /* PARTIAL BOOTSTRAP SUPPORT ~34K */
 /*@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/variables";
