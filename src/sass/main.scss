@@ -1,10 +1,6 @@
-
 /* FULL BOOTSTRAP SUPPORT ~147K */
 @import "../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
-
-
 /*Colors*/
-
 $ebc-blue: #0E1840;
 $teal: #0A7E8B;
 $blue: #18A8C8;
@@ -15,276 +11,236 @@ $orange: #F27D21;
 $gray: #718A94;
 $medium-gray: #B1C7C2;
 $light-gray: #E4E4E0;
-
 /*MIXINS*/
-
 @mixin header1($size, $color) {
-	font-family: "Helvetica";
-	font-size: $size;
-	color: $color;
+   font-family: "Helvetica";
+   font-size: $size;
+   color: $color;
 }
-
-
 @mixin tugsten-semibold($size, $color) {
-	color: $color;
-	font-size: $size;
-	font-family: "Tungsten A", "Tungsten B";
-	font-style: normal;
-	font-weight: 600;
-	text-transform: uppercase;
-	letter-spacing: 1px;
+   color: $color;
+   font-size: $size;
+   font-family: "Tungsten A", "Tungsten B";
+   font-style: normal;
+   font-weight: 600;
+   text-transform: uppercase;
+   letter-spacing: 1px;
 }
-
-
 @mixin proxima-nova-semibold($size, $color) {
-	color: $color;
-	font-size: $size;
-	font-family: "proxima-nova",sans-serif;
-	font-style: normal;
-	font-weight: 600;
-	text-transform: uppercase;
-	letter-spacing: 1px;
+   color: $color;
+   font-size: $size;
+   font-family: "proxima-nova",sans-serif;
+   font-style: normal;
+   font-weight: 600;
+   text-transform: uppercase;
+   letter-spacing: 1px;
 }
-
 @mixin proxima-nova-thin($size, $color) {
-	color: $color;
-	font-size: $size;
-	font-family: "proxima-nova",sans-serif;
-	font-style: normal;
-	font-weight: 100;
-	text-transform: uppercase;
+   color: $color;
+   font-size: $size;
+   font-family: "proxima-nova",sans-serif;
+   font-style: normal;
+   font-weight: 100;
+   text-transform: uppercase;
 }
-
 @mixin module-headers($color) {
-	position: relative;
-	z-index: 100;
-  background: $color;
-  width: 100%;
-  height: 35px;
-  text-align: center;
-  color:#fff;
-  h2 {
-    @include proxima-nova-thin(1.5em, #fff);
-    letter-spacing: 5px;
-    line-height: 35px;
-    -webkit-font-smoothing: antialiased;
-  }
-  &:after {
-    content: '';
-    width: 0;
-    height: 0;
-	  border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-  	border-top: 20px solid $color;
-    position: relative;
-    top:4px;
-  }
-}
+   position: relative;
+   z-index: 100;
+   background: $color;
+   width: 100%;
+   height: 35px;
+   text-align: center;
+   color: #fff;
 
+   h2 {
+      @include proxima-nova-thin(1.5em, #fff);
+      letter-spacing: 5px;
+      line-height: 35px;
+      -webkit-font-smoothing: antialiased;
+   }
+
+   &:after {
+      content: '';
+      width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-top: 20px solid $color;
+      position: relative;
+      top: 4px;
+   }
+}
 @mixin ctas($size, $color) {
-	font-size: 1.1em;
-	font-style: normal;
-	text-align: center;
-	display: inline-block;
-	margin: 5px;
+   font-size: 1.1em;
+   font-style: normal;
+   text-align: center;
+   display: inline-block;
+   margin: 5px;
 
-		a {
-			color: $color;
-			text-decoration: none;
-			display: block;
-			padding: 0 10px;
-			line-height: 1.6em;
-			border: 2px solid $color;
-			border-radius: 15px;
-		}
+   a {
+      color: $color;
+      text-decoration: none;
+      display: block;
+      padding: 0 10px;
+      line-height: 1.6em;
+      border: 2px solid $color;
+      border-radius: 15px;
+   }
 
-		a:hover {
-			background: $color;
-			color: #fff;
-		}
+   a:hover {
+      background: $color;
+      color: #fff;
+   }
 }
-
-
-
-
 /*MIXINS THAT IVE MADE (NOT FROM TOMS STYLE GUIDE)*/
-
-@mixin content-headline($color){
-	color: $color;
-	font-size: 2.7em;
-	font-family: "Tungsten A", "Tungsten B";
-	font-style: normal;
-	font-weight: 600;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	 text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.53);
+@mixin content-headline($color) {
+   color: $color;
+   font-size: 2.7em;
+   font-family: "Tungsten A", "Tungsten B";
+   font-style: normal;
+   font-weight: 600;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   text-shadow: 0 5px 5px rgba(0, 0, 0, 0.53);
 }
-
-
-@mixin overlay-headline($color){
-	color: $color;
-	font-size: 2.7em;
-	font-family: "Tungsten A", "Tungsten B";
-	font-style: normal;
-	font-weight: 600;
-	text-transform: uppercase;
-	letter-spacing: 1px;
+@mixin overlay-headline($color) {
+   color: $color;
+   font-size: 2.7em;
+   font-family: "Tungsten A", "Tungsten B";
+   font-style: normal;
+   font-weight: 600;
+   text-transform: uppercase;
+   letter-spacing: 1px;
 }
-
-
-
 /*CUSTOM BOOSTRAP COLUMNS*/
-
-.col-xs-15,
-.col-sm-15,
+.col-lg-15,
 .col-md-15,
-.col-lg-15 {
-    position: relative;
-    min-height: 1px;
-    padding-right: 10px;
-    padding-left: 10px;
+.col-sm-15,
+.col-xs-15 {
+   position: relative;
+   min-height: 1px;
+   padding-right: 10px;
+   padding-left: 10px;
 }
 
 .col-xs-15 {
-    width: 100%;
-    float: left;
+   width: 100%;
+   float: left;
 }
 @media (min-width: 768px) {
-.col-sm-15 {
-        width: 20%;
-        float: left;
-    }
+   .col-sm-15 {
+      width: 20%;
+      float: left;
+   }
 }
 @media (min-width: 992px) {
-    .col-md-15 {
-        width: 20%;
-        float: left;
-    }
+   .col-md-15 {
+      width: 20%;
+      float: left;
+   }
 }
 @media (min-width: 1200px) {
-    .col-lg-15 {
-        width: 20%;
-        float: left;
-    }
+   .col-lg-15 {
+      width: 20%;
+      float: left;
+   }
 }
-
-
-
-
-
-
-
-
 /*Rest of CSS*/
-
-
-
 h1 {
-	@include tugsten-semibold(null, null);
+   @include tugsten-semibold(null, null);
 }
 
 p {
-	font-family: "proxima-nova",sans-serif;
+   font-family: "proxima-nova",sans-serif;
 }
 
-body{
-	background-image: url("../img/river.jpg");
-	background-size: cover;
+body {
+   background-image: url("../img/river.jpg");
+   background-size: cover;
 }
 
 .fitness-header {
-	@include module-headers($orange);
+   @include module-headers($orange);
 }
 
 .dining-header {
-	@include module-headers($blue);
+   @include module-headers($blue);
 }
 
 .content-header {
-	@include module-headers($green);
+   @include module-headers($green);
 }
-
-
-
 /*FITNESS MODULE STYLES*/
+.primary-fitness-module {
+   .fitness-module-menu {
+      @include proxima-nova-thin(10px, white);
+      height: 77px;
 
+      .fmi-icon {
+         width: 50%;
+         margin: 10px auto 0;
 
-.primary-fitness-module{
+         img {
+            max-height: 28px;
+         }
+      }
 
+      p {
+         margin-bottom: 7px;
+      }
+      /*ask tom about the "Personal Training" menu item*/
+      #training {
+         margin-top: 10px;
+         line-height: 10px;
+      }
 
-	.fitness-module-menu{
-		@include proxima-nova-thin(10px, white);
-		height: 77px;
+      .fitness-menu-item {
+         text-align: center;
+         line-height: 30px;
+      }
 
+      .fitness-menu-item:hover {
+         cursor: pointer;
+      }
 
-		.fmi-icon{
-			width: 50%;
-			margin: 10px auto 0 auto;
+      .fmi-red-1 {
+         background-color: $orange;
 
-			img{
-				max-height:28px;
-			}
-		}
-		p{
-			margin-bottom: 7px;
+         &:before {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 20px solid $orange;
+            position: absolute;
+            top: -13px;
+            left: 30%;
+         }
+      }
 
-		}
+      .fmi-red-2 {
+         background-color: $red;
+      }
 
-		/*ask tom about the "Personal Training" menu item*/
+      .fmi-red-3 {
+         background-color: #b23945;
+      }
 
-		#training{
-			margin-top: 10px;
-			line-height: 10px;
-		}
-		.fitness-menu-item{
-			text-align: center;
-			line-height: 30px;
-		}
+      .fmi-red-4 {
+         background-color: #9c304e;
+      }
 
-		.fitness-menu-item:hover{
-			cursor: pointer;
-		}
-		.fmi-red-1{
-			background-color: $orange;
+      .fmi-red-5 {
+         background-color: $purple;
+      }
+   }
 
-			&:before{
-			   content: '';
-			    width: 0;
-			    height: 0;
-				border-left: 20px solid transparent;
-			    border-right: 20px solid transparent;
-			  	border-bottom: 20px solid $orange;
-			    position: absolute;
-			    top:-13px;
-			    left: 30%;
-		    
-  		}
-		}
-
-		.fmi-red-2{
-			background-color: $red;
-		}
-
-		.fmi-red-3{
-			background-color: #b23945;
-		}
-
-		.fmi-red-4{
-			background-color: #9c304e;
-		}
-		.fmi-red-5{
-			background-color: $purple;
-		}
-
-
-}
-
-	.fitness-module-photo{
-		height: 250px;
-		overflow: hidden;
-	}
-
-	/*.fitness-module-content{
+   .fitness-module-photo {
+      height: 250px;
+      overflow: hidden;
+   }
+   /*.fitness-module-content{
 		background-color: white;
 		color: $gray;
 		p{
@@ -293,264 +249,211 @@ body{
 		}
 	}*/
 }
-
-
-
 /*TABBED MODULE STYLES*/
+.tabbed-module {
+   position: relative;
 
+   .tabbed-module-content {
+      width: 100%;
+      height: 225px;
+      overflow: hidden;
+      position: absolute;
+      display: none;
 
+      .tabbed-module-photo {
+         width: 100%;
+      }
+   }
 
-.tabbed-module{
-	position: relative;
-	.tabbed-module-content{
-		width: 100%;
-		height: 225px;
-		overflow: hidden;
-		position: absolute;
-		display: none;
+   .tabbed-module-content:hover {
+      .tabbed-module-overlay {
+         display: block;
+      }
 
-	.tabbed-module-photo{
-		width: 100%;
-		}
-	}
+      .content-headline {
+         display: none;
+      }
+   }
 
-	.tabbed-module-content:hover{
-			.tabbed-module-overlay{
-				display: block;
-			}
-			.content-headline{
-				display:none;
-			}
-		}
+   .tabbed-module-overlay {
+      background-color: rgba(25, 169, 201, .7);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      display: none;
+      padding: 15px 50px;
+   }
 
+   .tmc-1 {
+      display: block;
+   }
 
-		.tabbed-module-overlay{
-			background-color: rgba(25, 169, 201, .7);
-			width: 100%;
-			height: 100%;
-			position: absolute;
-			display: none;
-			padding: 15px 50px;
-		}
+   .tabbed-module-menu {
+      @include proxima-nova-thin(10px, white);
+      height: 40px;
+      margin-top: 225px;
 
-.tmc-1{
-		display:block;
-	}
+      .tabbed-menu-item {
+         text-align: center;
+         line-height: 40px;
 
-	.tabbed-module-menu{
-		@include proxima-nova-thin(10px, white);
-		height: 40px;
-		margin-top: 225px;
+         &:before {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            position: absolute;
+            top: -13px;
+            left: 35%;
+         }
+      }
 
+      .tabbed-menu-item:hover {
+         cursor: pointer;
+      }
 
-	.tabbed-menu-item{
-		text-align: center;
-		line-height: 40px;
-	}
+      .tmi-blue-1 {
+         position: relative;
+         background-color: $blue;
+      }
 
-	.tabbed-menu-item:hover{
-		cursor: pointer;
-	}
-	.tmi-blue-1{
-		position: relative;
-		background-color: $blue;
-  	}
+      .tmi-blue-1-active {
+         &:before {
+            border-bottom: 20px solid $blue;
+         }
+      }
 
-  	.tmi-blue-1-active{
-  				&:before{
-			   content: '';
-			    width: 0;
-			    height: 0;
-				border-left: 20px solid transparent;
-			    border-right: 20px solid transparent;
-			  	border-bottom: 20px solid $blue;
-			    position: absolute;
-			    top:-13px;
-			    left: 35%;
-  		}
-  	}
+      .tmi-blue-2 {
+         background-color: #0c6d92;
+      }
 
+      .tmi-blue-2-active {
+         &:before {
+            border-bottom: 20px solid #0c6d92;
+         }
+      }
 
-	.tmi-blue-2{
-		background-color: #0c6d92;
-	}
+      .tmi-blue-3 {
+         background-color: #053a62;
+      }
 
-	.tmi-blue-2-active{
-		&:before{
-			content: '';
-			    width: 0;
-			    height: 0;
-				border-left: 20px solid transparent;
-			    border-right: 20px solid transparent;
-			  	border-bottom: 20px solid #0c6d92;
-			    position: absolute;
-			    top:-13px;
-			    left: 35%;
-	}
+      .tmi-blue-3-active {
+         &:before {
+            border-bottom: 20px solid #053a62;
+         }
+      }
+
+      .tmi-blue-4 {
+         background-color: $ebc-blue;
+      }
+
+      .tmi-blue-4-active {
+         &:before {
+            border-bottom: 20px solid $ebc-blue;
+         }
+      }
+   }
 }
-
-	.tmi-blue-3{
-		background-color: #053a62;
-	}
-
-	.tmi-blue-3-active{
-  				&:before{
-			   content: '';
-			    width: 0;
-			    height: 0;
-				border-left: 20px solid transparent;
-			    border-right: 20px solid transparent;
-			  	border-bottom: 20px solid #053a62;
-			    position: absolute;
-			    top:-13px;
-			    left: 35%;
-  		}
-  	}
-
-	.tmi-blue-4{
-		background-color: $ebc-blue;
-	}
-
-	.tmi-blue-4-active{
-  				&:before{
-			   content: '';
-			    width: 0;
-			    height: 0;
-				border-left: 20px solid transparent;
-			    border-right: 20px solid transparent;
-			  	border-bottom: 20px solid $ebc-blue;
-			    position: absolute;
-			    top:-13px;
-			    left: 35%;
-  		}
-  	}
-
-
-}
-}
-
-
 /*STANDARD MODULE STYLES*/
+.standard-module {
+   position: relative;
 
+   .standard-module-content {
+      width: 100%;
+      height: 250px;
+      overflow: hidden;
+      position: absolute;
 
-.standard-module{
-	position: relative;
+      .standard-module-photo {
+         width: 100%;
+      }
+   }
 
-	.standard-module-content{
-		width: 100%;
-		height: 250px;
-		overflow: hidden;
-		position: absolute;
-
-		.standard-module-photo{
-			width: 100%;
-
-		}
-	}
-
-
-
-
-	.standard-module-overlay{
-		background-color: rgba(152, 192, 61, .7);
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		display: none;
-		padding: 15px 50px;
-	}
+   .standard-module-overlay {
+      background-color: rgba(152, 192, 61, .7);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      display: none;
+      padding: 15px 50px;
+   }
 }
 
-	.standard-module:hover{
-		.standard-module-overlay{
-			display: block;
-		}
-		.content-headline{
-			display:none;
-		}
-	}
+.standard-module:hover {
+   .standard-module-overlay {
+      display: block;
+   }
 
-
+   .content-headline {
+      display: none;
+   }
+}
 /*Overlay Styles*/
-
-.overlay-headline{
-	@include overlay-headline(#ffffff);
+.overlay-headline {
+   @include overlay-headline(#ffffff);
 }
 
-.overlay-content{
-	color: white;
+.overlay-content {
+   color: white;
 }
-
-
-
-
 /*HEADLINE STYLES....CURRENTLY THESE ARE HORRENDOUS AND I NEED TO FIX THEM!! :) */
-
-.blue-content-headline{
-	@include content-headline($ebc-blue);
-	margin-left: 50px;
-	position: absolute;
-}
-.green-content-headline{
-	@include content-headline($green);
-	margin-left: 50px;
-	position: absolute;
-}
-.white-content-headline{
-	@include content-headline(white);
-	margin-left: 50px;
-	position: absolute;
-
+.blue-content-headline {
+   @include content-headline($ebc-blue);
+   margin-left: 50px;
+   position: absolute;
 }
 
-.purple-content-headline{
-	@include content-headline($purple);
-	margin-top: 0;
-	text-shadow: none;
+.green-content-headline {
+   @include content-headline($green);
+   margin-left: 50px;
+   position: absolute;
 }
 
-.gray-content-headline{
-	@include content-headline($gray);
-	margin-top: -15px;
-	text-shadow: none;
-
+.white-content-headline {
+   @include content-headline(white);
+   margin-left: 50px;
+   position: absolute;
 }
 
+.purple-content-headline {
+   @include content-headline($purple);
+   margin-top: 0;
+   text-shadow: none;
+}
 
-
+.gray-content-headline {
+   @include content-headline($gray);
+   margin-top: -15px;
+   text-shadow: none;
+}
 /*Button Styles*/
-
-.purple-button{
-	@include ctas(null, $purple);
+.purple-button {
+   @include ctas(null, $purple);
 }
 
-.white-button{
-	@include ctas(null, #ffffff);
-	margin: 5px 0;
+.white-button {
+   @include ctas(null, #ffffff);
+   margin: 5px 0;
 
-	a:hover{
-		background-color: $green;
-	}
+   a:hover {
+      background-color: $green;
+   }
 }
-
-
 /*Flexsliders*/
-#fitness-content-slider{
-	border-radius: 0;
-	height: 277px;
-	padding: 40px;
+#fitness-content-slider {
+   border-radius: 0;
+   height: 277px;
+   padding: 40px;
 
-	.flex-viewport{
-		height: 275px;
-	}
-	.slides{
-		height: 275px;
-	}
-	}
+   .flex-viewport {
+      height: 275px;
+   }
 
-
-
-
+   .slides {
+      height: 275px;
+   }
+}
 /* PARTIAL BOOTSTRAP SUPPORT ~34K */
 /*@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/variables";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins";

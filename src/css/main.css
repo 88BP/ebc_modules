@@ -5756,10 +5756,10 @@ button.close {
 /*MIXINS*/
 /*MIXINS THAT IVE MADE (NOT FROM TOMS STYLE GUIDE)*/
 /*CUSTOM BOOSTRAP COLUMNS*/
-.col-xs-15,
-.col-sm-15,
+.col-lg-15,
 .col-md-15,
-.col-lg-15 {
+.col-sm-15,
+.col-xs-15 {
   position: relative;
   min-height: 1px;
   padding-right: 10px;
@@ -5904,7 +5904,7 @@ body {
     /*ask tom about the "Personal Training" menu item*/ }
     .primary-fitness-module .fitness-module-menu .fmi-icon {
       width: 50%;
-      margin: 10px auto 0 auto; }
+      margin: 10px auto 0; }
       .primary-fitness-module .fitness-module-menu .fmi-icon img {
         max-height: 28px; }
     .primary-fitness-module .fitness-module-menu p {
@@ -5977,57 +5977,34 @@ body {
     .tabbed-module .tabbed-module-menu .tabbed-menu-item {
       text-align: center;
       line-height: 40px; }
+      .tabbed-module .tabbed-module-menu .tabbed-menu-item:before {
+        content: '';
+        width: 0;
+        height: 0;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        position: absolute;
+        top: -13px;
+        left: 35%; }
     .tabbed-module .tabbed-module-menu .tabbed-menu-item:hover {
       cursor: pointer; }
     .tabbed-module .tabbed-module-menu .tmi-blue-1 {
       position: relative;
       background-color: #18A8C8; }
     .tabbed-module .tabbed-module-menu .tmi-blue-1-active:before {
-      content: '';
-      width: 0;
-      height: 0;
-      border-left: 20px solid transparent;
-      border-right: 20px solid transparent;
-      border-bottom: 20px solid #18A8C8;
-      position: absolute;
-      top: -13px;
-      left: 35%; }
+      border-bottom: 20px solid #18A8C8; }
     .tabbed-module .tabbed-module-menu .tmi-blue-2 {
       background-color: #0c6d92; }
     .tabbed-module .tabbed-module-menu .tmi-blue-2-active:before {
-      content: '';
-      width: 0;
-      height: 0;
-      border-left: 20px solid transparent;
-      border-right: 20px solid transparent;
-      border-bottom: 20px solid #0c6d92;
-      position: absolute;
-      top: -13px;
-      left: 35%; }
+      border-bottom: 20px solid #0c6d92; }
     .tabbed-module .tabbed-module-menu .tmi-blue-3 {
       background-color: #053a62; }
     .tabbed-module .tabbed-module-menu .tmi-blue-3-active:before {
-      content: '';
-      width: 0;
-      height: 0;
-      border-left: 20px solid transparent;
-      border-right: 20px solid transparent;
-      border-bottom: 20px solid #053a62;
-      position: absolute;
-      top: -13px;
-      left: 35%; }
+      border-bottom: 20px solid #053a62; }
     .tabbed-module .tabbed-module-menu .tmi-blue-4 {
       background-color: #0E1840; }
     .tabbed-module .tabbed-module-menu .tmi-blue-4-active:before {
-      content: '';
-      width: 0;
-      height: 0;
-      border-left: 20px solid transparent;
-      border-right: 20px solid transparent;
-      border-bottom: 20px solid #0E1840;
-      position: absolute;
-      top: -13px;
-      left: 35%; }
+      border-bottom: 20px solid #0E1840; }
 
 /*STANDARD MODULE STYLES*/
 .standard-module {
@@ -6075,7 +6052,7 @@ body {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
-  text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.53);
+  text-shadow: 0 5px 5px rgba(0, 0, 0, 0.53);
   margin-left: 50px;
   position: absolute; }
 
@@ -6087,7 +6064,7 @@ body {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
-  text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.53);
+  text-shadow: 0 5px 5px rgba(0, 0, 0, 0.53);
   margin-left: 50px;
   position: absolute; }
 
@@ -6099,7 +6076,7 @@ body {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
-  text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.53);
+  text-shadow: 0 5px 5px rgba(0, 0, 0, 0.53);
   margin-left: 50px;
   position: absolute; }
 
@@ -6111,7 +6088,7 @@ body {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
-  text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.53);
+  text-shadow: 0 5px 5px rgba(0, 0, 0, 0.53);
   margin-top: 0;
   text-shadow: none; }
 
@@ -6123,7 +6100,7 @@ body {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
-  text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.53);
+  text-shadow: 0 5px 5px rgba(0, 0, 0, 0.53);
   margin-top: -15px;
   text-shadow: none; }
 
@@ -6186,3 +6163,5 @@ body {
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/scaffolding";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/type";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/grid";*/
+
+/*# sourceMappingURL=main.css.map */
