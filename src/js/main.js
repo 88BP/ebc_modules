@@ -4,22 +4,39 @@ console.log("haiiiiii");
 
 	$('#fitness-photo-slider').flexslider({
 		animation: "slide",
+		easing: "swing",
 		slideshowSpeed: 4000,
 		pauseOnHover: true,
 		controlNav:false,
 		directionNav: false,
+		after: function(slider){ 
+        slider.pause(); 
+        slider.play(); 
+    }
 
 
 	});
 
 	$('#fitness-content-slider').flexslider({
 		animation: "slide",
+		easing: "swing",
 		slideshowSpeed: 4000,
 		pauseOnHover: true,
 		controlNav:false,
 		directionNav: false,
+		sync: '#fitness-photo-slider',
 
 
+	});
+
+	$('.primary-fitness-module').mouseenter(function(){
+		$('#fitness-photo-slider').flexslider('pause');
+		$('#fitness-content-slider').flexslider('pause');
+	});
+
+	$('.primary-fitness-module').mouseleave(function(){
+		$('#fitness-photo-slider').flexslider('play');
+		$('#fitness-content-slider').flexslider('play');
 	});
 
 
@@ -27,21 +44,25 @@ console.log("haiiiiii");
 
 // flexslider click functions
 	$('.fmi-red-1').on('click', function (){
-		$('.flexslider').flexslider(0);
+		$('#fitness-photo-slider').flexslider(0);
+		$('#fitness-content-slider').flexslider(0);
 	})
 	$('.fmi-red-2').on('click', function (){
-		$('.flexslider').flexslider(1);
+		$('#fitness-photo-slider').flexslider(1);
+		$('#fitness-content-slider').flexslider(1);
 	})
 	$('.fmi-red-3').on('click', function (){
-		$('.flexslider').flexslider(2);
+		$('#fitness-photo-slider').flexslider(2);
+		$('#fitness-content-slider').flexslider(2);
 	})
 
 	$('.fmi-red-4').on('click', function (){
-		$('.flexslider').flexslider(3);
-		console.log("flexslider omgggggg")
+		$('#fitness-photo-slider').flexslider(3);
+		$('#fitness-content-slider').flexslider(3);
 	})
 	$('.fmi-red-5').on('click', function (){
-		$('.flexslider').flexslider(4);
+		$('#fitness-photo-slider').flexslider(4);
+		$('#fitness-content-slider').flexslider(4);
 	})
 
 

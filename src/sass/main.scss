@@ -197,6 +197,17 @@ body {
       .fitness-menu-item {
          text-align: center;
          line-height: 30px;
+
+           &:before {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            position: absolute;
+            top: -13px;
+            left: 30%;
+         }
       }
 
       .fitness-menu-item:hover {
@@ -206,18 +217,9 @@ body {
       .fmi-red-1 {
          background-color: $orange;
 
-         &:before {
-            content: '';
-            width: 0;
-            height: 0;
-            border-left: 20px solid transparent;
-            border-right: 20px solid transparent;
-            border-bottom: 20px solid $orange;
-            position: absolute;
-            top: -13px;
-            left: 30%;
-         }
       }
+
+       
 
       .fmi-red-2 {
          background-color: $red;
@@ -234,7 +236,34 @@ body {
       .fmi-red-5 {
          background-color: $purple;
       }
-   }
+
+      .fmi-red-1-active{
+      		&:before{
+      			border-bottom: 20px solid $orange;
+      		}
+   		}
+
+   		   .fmi-red-2-active{
+      		&:before{
+      			border-bottom: 20px solid $red;
+      		}
+   		}
+
+   		   .fmi-red-3-active{
+      		&:before{
+      			border-bottom: 20px solid #b23945;
+      		}
+   		}
+   		   .fmi-red-4-active{
+      		&:before{
+      			border-bottom: 20px solid #9c304e;
+      		}
+   		}
+   		   .fmi-red-5-active{
+      		&:before{
+      			border-bottom: 20px solid $purple;
+      		}
+   		}
 
    .fitness-module-photo {
       height: 250px;
