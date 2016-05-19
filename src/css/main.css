@@ -5915,20 +5915,20 @@ body {
     .primary-fitness-module .fitness-module-menu .fitness-menu-item {
       text-align: center;
       line-height: 30px; }
-    .primary-fitness-module .fitness-module-menu .fitness-menu-item:hover {
-      cursor: pointer; }
-    .primary-fitness-module .fitness-module-menu .fmi-red-1 {
-      background-color: #F27D21; }
-      .primary-fitness-module .fitness-module-menu .fmi-red-1:before {
+      .primary-fitness-module .fitness-module-menu .fitness-menu-item:before {
         content: '';
         width: 0;
         height: 0;
         border-left: 20px solid transparent;
         border-right: 20px solid transparent;
-        border-bottom: 20px solid #F27D21;
         position: absolute;
         top: -13px;
         left: 30%; }
+    .primary-fitness-module .fitness-module-menu .fitness-menu-item:hover {
+      cursor: pointer; }
+    .primary-fitness-module .fitness-module-menu .fmi-red-1 {
+      position: relative;
+      background-color: #F27D21; }
     .primary-fitness-module .fitness-module-menu .fmi-red-2 {
       background-color: #F04F26; }
     .primary-fitness-module .fitness-module-menu .fmi-red-3 {
@@ -5937,6 +5937,16 @@ body {
       background-color: #9c304e; }
     .primary-fitness-module .fitness-module-menu .fmi-red-5 {
       background-color: #792357; }
+    .primary-fitness-module .fitness-module-menu .fmi-red-1-active:before {
+      border-bottom: 20px solid #F27D21; }
+    .primary-fitness-module .fitness-module-menu .fmi-red-2-active:before {
+      border-bottom: 20px solid #F04F26; }
+    .primary-fitness-module .fitness-module-menu .fmi-red-3-active:before {
+      border-bottom: 20px solid #b23945; }
+    .primary-fitness-module .fitness-module-menu .fmi-red-4-active:before {
+      border-bottom: 20px solid #9c304e; }
+    .primary-fitness-module .fitness-module-menu .fmi-red-5-active:before {
+      border-bottom: 20px solid #792357; }
   .primary-fitness-module .fitness-module-photo {
     height: 250px;
     overflow: hidden; }

@@ -215,6 +215,7 @@ body {
       }
 
       .fmi-red-1 {
+      	position: relative;
          background-color: $orange;
 
       }
@@ -264,6 +265,7 @@ body {
       			border-bottom: 20px solid $purple;
       		}
    		}
+   	}
 
    .fitness-module-photo {
       height: 250px;

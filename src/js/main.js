@@ -13,6 +13,7 @@ console.log("haiiiiii");
         slider.pause(); 
         slider.play(); 
     }
+    
 
 
 	});
@@ -25,6 +26,37 @@ console.log("haiiiiii");
 		controlNav:false,
 		directionNav: false,
 		sync: '#fitness-photo-slider',
+		after: function(slider){ 
+        slider.pause(); 
+        slider.play(); 
+
+        var currentSlide=$('#fitness-content-slider').data('flexslider').currentSlide
+   
+
+		console.log(currentSlide);
+
+		if (currentSlide === 0) {
+			$('.fitness-menu-item').removeClass('fmi-red-1-active fmi-red-2-active fmi-red-3-active fmi-red-4-active fmi-red-5-active')
+			$('.fmi-red-1').addClass('fmi-red-1-active');
+		}
+		if (currentSlide === 1) {
+			$('.fitness-menu-item').removeClass('fmi-red-1-active fmi-red-2-active fmi-red-3-active fmi-red-4-active fmi-red-5-active')
+			$('.fmi-red-2').addClass('fmi-red-2-active');
+		}
+		if (currentSlide === 2) {
+			$('.fitness-menu-item').removeClass('fmi-red-1-active fmi-red-2-active fmi-red-3-active fmi-red-4-active fmi-red-5-active')
+			$('.fmi-red-3').addClass('fmi-red-3-active');
+		}
+		if (currentSlide === 3) {
+			$('.fitness-menu-item').removeClass('fmi-red-1-active fmi-red-2-active fmi-red-3-active fmi-red-4-active fmi-red-5-active')
+			$('.fmi-red-4').addClass('fmi-red-4-active');
+		}
+		if (currentSlide === 4) {
+			$('.fitness-menu-item').removeClass('fmi-red-1-active fmi-red-2-active fmi-red-3-active fmi-red-4-active fmi-red-5-active')
+			$('.fmi-red-5').addClass('fmi-red-5-active');
+		}
+
+    }
 
 
 	});
@@ -43,26 +75,67 @@ console.log("haiiiiii");
 
 
 // flexslider click functions
+
+
+var currentFitnessTab = 'fmi-red-1-active';
+
 	$('.fmi-red-1').on('click', function (){
 		$('#fitness-photo-slider').flexslider(0);
 		$('#fitness-content-slider').flexslider(0);
-	})
+		$('.fmi-red-1').addClass('fmi-red-1-active');
+		
+		if (currentFitnessTab !== 'fmi-red-1-active') {
+				$('.fitness-menu-item').removeClass(currentFitnessTab);
+				currentFitnessTab=$(this).attr('class').split(' ').pop();
+		}
+
+		
+	});
 	$('.fmi-red-2').on('click', function (){
 		$('#fitness-photo-slider').flexslider(1);
 		$('#fitness-content-slider').flexslider(1);
-	})
+		$('.fmi-red-2').addClass('fmi-red-2-active');
+
+		if (currentFitnessTab !== 'fmi-red-2-active') {
+				$('.fitness-menu-item').removeClass(currentFitnessTab);
+				currentFitnessTab=$(this).attr('class').split(' ').pop();
+		}
+		
+	});
 	$('.fmi-red-3').on('click', function (){
 		$('#fitness-photo-slider').flexslider(2);
 		$('#fitness-content-slider').flexslider(2);
-	})
+		$('.fmi-red-3').addClass('fmi-red-3-active');
+
+		if (currentFitnessTab !== 'fmi-red-3-active') {
+				$('.fitness-menu-item').removeClass(currentFitnessTab);
+				currentFitnessTab=$(this).attr('class').split(' ').pop();
+				
+		}
+		
+	});
 
 	$('.fmi-red-4').on('click', function (){
 		$('#fitness-photo-slider').flexslider(3);
 		$('#fitness-content-slider').flexslider(3);
+		$('.fmi-red-4').addClass('fmi-red-4-active');
+
+		if (currentFitnessTab !== 'fmi-red-4-active') {
+				$('.fitness-menu-item').removeClass(currentFitnessTab);
+				currentFitnessTab=$(this).attr('class').split(' ').pop();
+		};
+	
 	})
 	$('.fmi-red-5').on('click', function (){
 		$('#fitness-photo-slider').flexslider(4);
 		$('#fitness-content-slider').flexslider(4);
+		$('.fmi-red-5').addClass('fmi-red-5-active');
+
+		if (currentFitnessTab !== 'fmi-red-5-active') {
+				$('.fitness-menu-item').removeClass(currentFitnessTab);
+				currentFitnessTab=$(this).attr('class').split(' ').pop();
+		};
+		
 	})
 
 
